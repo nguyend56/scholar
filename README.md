@@ -1,1 +1,1 @@
-# scholar
+# scholars-project
