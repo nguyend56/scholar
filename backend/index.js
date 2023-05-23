@@ -6,6 +6,8 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
+const httpServer = createServer(app);
+
 let people = [
   {
     name: "Hannah Rickard",
@@ -34,8 +36,8 @@ app.get("/", async (req, res, next) => {
 });
 
 // mongodb connection
-// const connectDB = require("./config/db");
-// connectDB();
+const connectDB = require("./config/db");
+connectDB();
 
 app.use("/api", apiRoutes);
 
