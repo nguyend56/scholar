@@ -6,26 +6,16 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
+// Enable CORS middleware
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "http://localhost:5002");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.header("Access-Control-Allow-Headers", "Content-Type");
+  next();
+});
+
+
 const httpServer = createServer(app);
-
-let people = [
-  {
-    name: "Hannah Rickard",
-    number: "06-51-99-56-83",
-    id: 1
-  },
-  {
-    name: "Hyun Namkoong",
-    number: "10987654",
-    id: 2
-  },
-  {
-    name: "Courtney Martinez",
-    number: "3691215",
-    id: 3
-  }
-]
-
 
 app.use(express.json());
 

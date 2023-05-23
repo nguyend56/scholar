@@ -1,5 +1,11 @@
-const ComputerVersionRoutes = () => {
-    console.log('ComputerVersionRoutes routes');
-}
+const express = require('express')
+const router = express.Router()
+const {getComputerVersion} = require("../controllers/computerVersionController")
 
-module.exports = ComputerVersionRoutes;
+// const ComputerVersionRoutes = () => {
+//     console.log('ComputerVersionRoutes routes');
+// }
+
+router.get("/", getComputerVersion)
+
+module.exports = router;
