@@ -1,13 +1,24 @@
 import logo from "../pictures/Union College Logo.png";
 import Input from "./Input";
 import Button from "./Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
-import React from "react";
+import React, { useState } from "react";
 
 const navLinks = [];
 
 const Header = () => {
+  const [searchString, setSearchString] = useState("");
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    if (searchString === "") {
+      navigate(`/computer-info/_`);
+    } else {
+      navigate(`/computer-info/${searchString}`);
+    }
+  };
+
   return (
     <header className="h-fit px-5 py-2 flex flex-row justify-between items-center fixed left-0 top-0 w-full bg-black z-50">
       <Link to="https://www.union.edu/">
@@ -41,7 +52,7 @@ const Header = () => {
         <LinkContainer to="/computerVersion">
           <div key="computerVersion" className="w-fit h-fit group">
             <span className="text-white" key="top-manufacturers">
-              Latest / Oldest Computer Versions
+             Computer Versions
             </span>
             <div className="mt-[2px] w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition duration-300 origin-left"></div>
           </div>
@@ -76,8 +87,8 @@ const Header = () => {
         </LinkContainer>
       </div>
       <div className="flex flex-row space-x-1 items-center">
-        <Input />
-        <Button>Search</Button>
+        <Input input={searchString} setInput={setSearchString} />
+        <Button onClick={handleSearch}>Search</Button>
       </div>
     </header>
   );

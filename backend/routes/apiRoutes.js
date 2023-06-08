@@ -4,6 +4,7 @@ const app = express()
 const compVerRoutes = require("./ComputerVersionRoutes")
 // const historyRoutes = require("./HistoryRoutes")
 // const topManuRoutes = require("./TopManufacturersRoutes")
+const searchRoutes = require("./SearchRoutes")
 
 const jwt = require("jsonwebtoken");
 
@@ -25,5 +26,8 @@ app.get("/", (req, res) => {
 // app.use("/top-manufactures", topManuRoutes)
 app.use("/computerVersion", compVerRoutes)
 // app.use("/history", historyRoutes)
+
+
+app.use("/search", searchRoutes);
 
 module.exports = app

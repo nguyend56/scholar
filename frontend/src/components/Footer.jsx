@@ -1,15 +1,16 @@
 import logo from "../pictures/Union College Logo.png";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const navLinks = [
-  { name: "term-of-use", text: "Term Of Use", href: "" },
-  { name: "Privacy-Policy", text: "Privacy Policy", href: "" },
+  { name: "term-of-use", text: "Term Of Use", href: "/termOfUse" },
+  { name: "Privacy-Policy", text: "Privacy Policy", href: "/privacyPolicy" },
   {
     name: "@copyright",
-    text: "@Copyright",
+    text: "© 2023 Union College",
     href: "",
   },
-  { name: "address", text: "Address", href: "" },
+  { name: "address", text: "Address", href: "/address" },
 ];
 
 const Footer = () => {
@@ -19,8 +20,10 @@ const Footer = () => {
       <div className="flex flex-row justify-center flex-grow font-semibold cursor-pointer">
         <div className="flex flex-row justify-evenly w-full">
           {navLinks.map((link) => (
-            <div key={link.name} className="w-fit h-fit group">
-              <span key={link.name} style={{ color: "#FFFFFF" }}>{link.text}</span>
+            <div key={link.name} className="w-fit h-fit group cursor-pointer">
+              <Link to={link.href} className="text-white no-underline">
+                {link.text}
+              </Link>
               <div className="w-full h-[1px] bg-white scale-x-0 group-hover:scale-x-100 transition duration-300 origin-left"></div>
             </div>
           ))}
