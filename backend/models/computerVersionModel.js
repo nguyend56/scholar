@@ -38,7 +38,12 @@ const computerVersionSchema = mongoose.Schema({
     type: String,
     required: true,
     default: "None"
+  },
+  articleUrl: {
+    type: String,
+    required: true,
   }
+  
 //   year: {
 //     type: String,
 //   },

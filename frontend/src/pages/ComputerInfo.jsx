@@ -1,19 +1,12 @@
 /* eslint-disable */
-
-import backgroundImg from "../pictures/WallpaperDog-10752030.jpg";
 import PageContainer from "../components/PageContainer.component";
-import boxPic from "../pictures/HomePagePic1.jpeg";
-import computerVersionImage from "../pictures/IntroHomePagePic.jpeg";
-import hightlightPic1 from "../pictures/HightlightPic1.webp";
-import hightlightPic2 from "../pictures/highlightPic2.jpeg";
-import hightlightPic3 from "../pictures/highlightPic3.jpeg";
-import hightlightPic4 from "../pictures/highlightPic4.jpeg";
 import React, { useEffect } from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/esm/Button";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const ComputerInfo = () => {
   const { searchString } = useParams();
@@ -34,6 +27,7 @@ const ComputerInfo = () => {
 
   return (
     <PageContainer>
+      
       {computers.length === 0 ? (
         <div>No Computers found</div>
       ) : (
@@ -46,7 +40,10 @@ const ComputerInfo = () => {
                 <Card.Text>
                   {computer.manufacturer} {computer.model} {computer.year}
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <Link to={computer.articleUrl} target="_blank">
+                <Button variant="primary">Article</Button>
+              </Link>
+                
               </Card.Body>
             </Card>
           ))}

@@ -9,6 +9,7 @@ const computers = [
     price: 439,
     cpu: "Intel 8080 @ 2 Mhz",
     ram: "4 Kb",
+    articleUrl: "https://en.wikipedia.org/wiki/Altair_8800"
   },
 
   {
@@ -19,6 +20,7 @@ const computers = [
     price: 795,
     cpu: "MOS 6502 @ 1 Mhz",
     ram: "4 Kb",
+    articleUrl:"https://en.wikipedia.org/wiki/Commodore_PET"
   },
 
   {
@@ -29,6 +31,7 @@ const computers = [
     price: 1298,
     cpu: "MOS 6502 @ 1 Mhz",
     ram: "4 Kb",
+    articleUrl:"https://en.wikipedia.org/wiki/Apple_II"
   },
 
   {
@@ -39,6 +42,7 @@ const computers = [
     price: 130,
     cpu: "Ziglog Z80 @ 3.25 Mhz",
     ram: "1 Kb",
+    articleUrl:"https://en.wikipedia.org/wiki/ZX81"
   },
 
   {
@@ -49,6 +53,7 @@ const computers = [
     price: 1595,
     cpu: "Ziglog Z80 @ 4 Mhz",
     ram: "64 Kb",
+    articleUrl:"https://www.old-computers.com/museum/computer.asp?st=1&c=954"
   },
 
   {
@@ -59,7 +64,8 @@ const computers = [
     price: 3900,
     cpu: "Motorola 6800 @ 8 Mhz",
     ram: "1 Mb",
-    hardDrive: "40 Mb"
+    hardDrive: "40 Mb",
+    articleUrl:"https://en.wikipedia.org/wiki/Macintosh_SE"
   },
 
   {
@@ -70,6 +76,7 @@ const computers = [
     price: 1000,
     cpu: "Motorola 6800 @ 8 Mhz",
     ram: "1 Mb",
+    articleUrl:"https://en.wikipedia.org/wiki/Macintosh_Classic"
   },
   
   {
@@ -81,7 +88,8 @@ const computers = [
     cpu: "PowerPC @117MHz",
     ram: "32 Mb",
     hardDrive: "1.1 Gb",
-    screen: "10.4 inch"
+    screen: "10.4 inch",
+    articleUrl:"https://en.wikipedia.org/wiki/PowerBook_5300"
   },
 
   {
@@ -92,7 +100,8 @@ const computers = [
     price: 1299,
     cpu: "PowerPC G3 @233MHz",
     ram: "32 Mb",
-    hardDrive: "4 Gb"
+    hardDrive: "4 Gb",
+    articleUrl:"https://en.wikipedia.org/wiki/IMac_G3"
   },
 
   {
@@ -103,7 +112,8 @@ const computers = [
     price: 1500,
     cpu: "PowerPC G4 @500MHz",
     ram: "256 Mb",
-    hardDrive: "20 Gb"
+    hardDrive: "20 Gb",
+    articleUrl:"https://en.wikipedia.org/wiki/PowerBook_G4"
   },
 
   {
@@ -114,7 +124,8 @@ const computers = [
     price: 1299,
     cpu: "PowerPC G4 @700MHz",
     ram: "256 Mb",
-    hardDrive: "40 Gb"
+    hardDrive: "40 Gb",
+    articleUrl:"https://en.wikipedia.org/wiki/IMac_G4"
   },
 
   {
@@ -125,7 +136,8 @@ const computers = [
     price: 1999,
     cpu: "PowerPC G5 @2.7GHz",
     ram: "256 Mb",
-    hardDrive: "160 Gb"
+    hardDrive: "160 Gb",
+    articleUrl:"https://en.wikipedia.org/wiki/Power_Mac_G5"
   },
 
   {
@@ -136,7 +148,8 @@ const computers = [
     price: 2000,
     cpu: "Intel Core Duo @1.67Ghz",
     ram: "2 Gb",
-    hardDrive: "80 Gb"
+    hardDrive: "80 Gb",
+    articleUrl:"https://en.wikipedia.org/wiki/MacBook_Pro"
   },
 
   {
@@ -147,7 +160,8 @@ const computers = [
     price: 1799,
     cpu: "Intel Core 2 Duo @2.13Ghz",
     ram: "2 Gb",
-    hardDrive: "128 Gb SSD"
+    hardDrive: "128 Gb SSD",
+    articleUrl:"https://en.wikipedia.org/wiki/MacBook_Air"
   },
   
 ]
